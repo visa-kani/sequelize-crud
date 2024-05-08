@@ -1,0 +1,25 @@
+components:
+  schemas:
+    Employee:
+      type: object
+      properties:
+        employee_id:
+          type: integer
+          # format: email
+        first_name:
+          type: string 
+        last_name:
+          type: string 
+        email:
+          type: string
+        password:
+          type: string
+        deleted:
+          type: boolean
+      example:
+        first_name: Naveen 
+        last_name: Kumar
+        email: naveen@example.com
+        password: password1
+        createdAt: 2020-11-11T04:16:19.513+00:00
+        updatedAt: 2020-11-11T04:16:19.513+00:00  
