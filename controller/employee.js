@@ -31,7 +31,7 @@ const AddEmployee = async (req, res) => {
         .status(400)
         .json({
           error: "Unique Constraint Violation",
-          msg: "Department ID already exists",
+          msg: "already exists",
         });
     } else if (error.name === "SequelizeValidationError") {
       const errorMessages = error.errors.map((err) => err.message);

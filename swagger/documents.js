@@ -82,8 +82,6 @@ const swaggerDocument = {
                                     "last_name": "KaniAAA",
                                     "email": "kanimozhi.t.applogiq@gmail.com",
                                     "hire_date": "2021-10-10",
-                                    "createdAt": "2021-05-05",
-                                    "updatedAt": "2024-04-23",
                                     "department_id": 10
                                 }
                             },

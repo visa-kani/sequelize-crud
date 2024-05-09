@@ -28,7 +28,7 @@ const EmployeeModel = sequelize.define("employees", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-
+        unique: true,
         validate: {
             notNull: {
                 msg: 'Email value is required!',
@@ -36,6 +36,10 @@ const EmployeeModel = sequelize.define("employees", {
             isEmail: {
                 msg: 'Invalid Email format!',
             },
+            // unique: {
+            //     name: 'unique_email',
+            //     msg: 'Email must be unique!',
+            // },
         },
     },
     hire_date: {
@@ -58,7 +62,7 @@ const EmployeeModel = sequelize.define("employees", {
     },
     updatedAt: {
         type: DataTypes.DATE
-    },  
+    },
     department_id: {
         type: DataTypes.INTEGER,
         allowNull: false,

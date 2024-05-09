@@ -2,6 +2,8 @@ const employees = require("../controller/employee")
 const users = require("../controller/user-details")
 const { validateToken } = require("../JWT");
 const router = require('express').Router()
+const schema = require('../validation/employee');
+const middleware = require('../validation/middleware');
 
 // Employee Routers
 
@@ -9,7 +11,7 @@ router.get("/employeeData", validateToken, employees.GetEmployee)
 
 router.get("/employeeData/:id", validateToken, employees.GetEmployeeById)
 
-router.post("/employeeData", validateToken, employees.AddEmployee)
+router.post("/employeeData", validateToken, middleware(schema.CreateEmployee), employees.AddEmployee)
 
 router.put("/employeeData/:id", validateToken, employees.UpdateEmployee)
 
